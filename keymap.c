@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      | Ins  |           |      |      |   [  |  ]   |      |      |   F12  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   !  |   @  |   #  |   $  |   %  |------|           |------|   ^  |   &  |   *  |   (  |   )  |        |
+ * |        |   !  |   @  |   #  |   $  |   %  |------|           |------|   ^  |   (  |   )  |   &  |   *  |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      |      |   {  |   }  |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // right hand
        KC_NO,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
        KC_NO,   KC_NO,   KC_LBRC, KC_RBRC, KC_NO,   KC_NO,   KC_F12,
-                KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_NO,
+                KC_CIRC, KC_LPRN, KC_RPRN, KC_AMPR, KC_ASTR, KC_NO,
        KC_NO,   KC_NO,   KC_LCBR, KC_RCBR, KC_NO,   KC_NO,   KC_NO,
                          KC_NO,   KC_PGUP, KC_PGDN, KC_NO,   KC_NO,
        KC_NO,   KC_NO,
