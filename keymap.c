@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |        |   ^  |   &  |   |  |   =  |   ~  | INS  |           | WH_D |   @  |   "  |   [  |   ]  |      |   F12  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   \  |   /  |   :  |   -  |   +  |------|           |------|   #  |   '  |   (  |   )  |   !  |        |
+ * |  ESC   |   \  |   /  |   :  |   -  |   +  |------|           |------|   #  |   '  |   (  |   )  |   !  |        |
  * |--------+------+------+------+------+------|      |           | WH_U |------+------+------+------+------+--------|
  * |        |   *  |   <  |   >  |   $  |   %  |      |           |      |   _  |   `  |   {  |   }  |   ?  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // left hand
        KC_NO,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_NO,
        KC_NO,   KC_CIRC, KC_AMPR, KC_PIPE, KC_EQL,  KC_TILD, KC_INS,
-       KC_NO,   KC_BSLS, KC_SLSH, KC_COLN, KC_MINS, KC_PLUS,
+       KC_ESC,  KC_BSLS, KC_SLSH, KC_COLN, KC_MINS, KC_PLUS,
        KC_NO,   KC_ASTR, KC_LABK, KC_RABK, KC_DLR,  KC_PERC, KC_NO,
        KC_NO,   KC_NO,   KC_HOME, KC_END,  KC_TRNS,
                                         KC_NO,   KC_NO,
