@@ -86,11 +86,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |   ^  |   *  |   $  |   :  |   &  | INS  |           | WH_D |   @  |   "  |   [  |   ]  |      |   F12  |
+ * |        |   %  |   &  |   |  |   \  |   ~  | INS  |           | WH_D |   @  |   "  |   [  |   ]  |      |   F12  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |  ESC   |   <  |   -  |   =  |   >  |   +  |------|           |------|   _  |   '  |   (  |   )  |   !  |        |
+ * |  ESC   |   /  |   =  |   -  |   :  |   +  |------|           |------|   _  |   '  |   (  |   )  |   !  |        |
  * |--------+------+------+------+------+------|      |           | WH_U |------+------+------+------+------+--------|
- * |        |   %  |   ~  |   |  |   /  |   \  |      |           |      |   #  |   `  |   {  |   }  |   ?  |        |
+ * |        |   <  |   *  |   $  |   >  |   ^  |      |           |      |   #  |   `  |   {  |   }  |   ?  |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      | Home | End  |   -  |                                       |   -  | PgUp | PgDn |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -106,9 +106,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [SYMB] = KEYMAP(
        // left hand
        KC_NO,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_NO,
-       KC_NO,   KC_CIRC, KC_ASTR, KC_DLR,  KC_COLN, KC_AMPR, KC_INS,
-       KC_ESC,  KC_LABK, KC_MINS, KC_EQL,  KC_RABK, KC_PLUS,
-       KC_NO,   KC_PERC, KC_TILD, KC_PIPE, KC_SLSH, KC_BSLS, KC_NO,
+       KC_NO,   KC_PERC, KC_AMPR, KC_PIPE, KC_BSLS, KC_TILD, KC_INS,
+       KC_ESC,  KC_SLSH, KC_EQL,  KC_MINS, KC_COLN, KC_PLUS,
+       KC_NO,   KC_LABK, KC_ASTR, KC_DLR,  KC_RABK, KC_CIRC, KC_NO,
        KC_NO,   KC_NO,   KC_HOME, KC_END,  KC_TRNS,
                                         KC_NO,   KC_NO,
                                                  KC_TRNS,
