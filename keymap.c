@@ -132,9 +132,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Caps   |      |MsLeft|MsDown|MsRght| WhlU |------|           |------|      |      |      |      |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | Play   | Mute | WhlL |      | WhlR |      |      |           |      |      |      |      |      |      |        |
+ * | BrwBk  | Mute | WhlL |      | WhlR |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | VolUp| VolDn| Prev | Next | BrwBk|                                       |      |      |      |      |      |
+ *   | VolUp| VolDn| Prev | Next | Play |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |      |      |
@@ -149,8 +149,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_NLCK, KC_SLCK, KC_PAUS, KC_NO,   KC_NO,   KC_NO,   KC_NO,
        KC_PSCR, KC_NO,   KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_D, KC_NO,
        KC_CAPS, KC_NO,   KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_U,
-       KC_MPLY, KC_MUTE, KC_WH_L, KC_NO,   KC_WH_R, KC_NO,   KC_NO,
-       KC_VOLU, KC_VOLD, KC_MPRV, KC_MNXT, KC_WBAK,
+       KC_WBAK, KC_MUTE, KC_WH_L, KC_NO,   KC_WH_R, KC_NO,   KC_NO,
+       KC_VOLU, KC_VOLD, KC_MPRV, KC_MNXT, KC_MPLY,
                                            KC_NO,   KC_NO,
                                                     KC_TRNS,
                                   KC_TRNS, KC_TRNS, KC_TRNS,
