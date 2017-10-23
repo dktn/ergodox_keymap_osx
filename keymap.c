@@ -15,26 +15,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |  ESC   |   1  |   2  |   3  |   4  |   5  | ENT  |           | BTN2 |   6  |   7  |   8  |   9  |   0  |  ESC   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  TAB   |   Q  |   W  |   D  |   P  |   G  | DELT |           | BTN1 |   J  |   L  |   U  |   Y  |   ;  |        |
+ * |  TAB   |   Q  |   W  |   D  |   P  |   G  | DELT |           | BTN1 |   J  |   L  |   U  |   Y  |   ;  |  BTN1  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  L1    |   A  |   R  |   S  |   T  |   F  |------|           |------|   M  |   N  |   E  |   I  |   O  |   L1   |
  * |--------+------+------+------+------+------|  L2  |           | L2   |------+------+------+------+------+--------|
- * |    `   |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   H  |   ,  |   .  | ENT  |        |
+ * |    `   |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   H  |   ,  |   .  | ENT  |  BTN2  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | UP   | DOWN | LEFT | RIGHT| BSPC |                                       | SPC  | UP   | DOWN | WH_U | WH_D |
  *   `----------------------------------'                                       `----------------------------------'
  * OSX:
  *                                        ,-------------.       ,-------------.
- *                                        | BTN2 | BTN1 |       | BTN1 | BTN2 |
+ *                                        | RALT |      |       |      | RALT |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | LCTL |       | RCTL |      |      |
  *                                 |LSHFT | LGUI |------|       |------| RGUI |RSHFT |
- *                                 |      |      | RALT |       | RALT |      |      |
+ *                                 |      |      | LALT |       | RALT |      |      |
  *                                 `--------------------'       `--------------------'
  *
  * Linux:
  *                                        ,-------------.       ,-------------.
- *                                        | LGUI |      |       |      | RGUI |
+ *                                        | RALT | LGUI |       | RGUI | RALT |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | LALT |       | LALT |      |      |
  *                                 |LSHFT | LCTL |------|       |------| RCTL |RSHFT |
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 
-#ifdef LINUX_MODE
+#ifndef LINUX_MODE
 // OLS vs. MO
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
@@ -54,18 +54,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(SYMB),       KC_A,      KC_R,    KC_S,    KC_T,   KC_F,
         KC_GRV,         KC_Z,      KC_X,    KC_C,    KC_V,   KC_B,    MO(MDIA),
         KC_UP,          KC_DOWN,   KC_LEFT, KC_RGHT, KC_BSPC,
-                                                     KC_LGUI,   KC_NO,
-                                                                KC_LALT,
-                                              KC_LSFT, KC_LCTL, KC_RALT,
+                                                     KC_LALT,   KC_NO,
+                                                                KC_LCTL,
+                                              KC_LSFT, KC_LGUI, KC_LALT,
         // right hand
              KC_BTN2,     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,       KC_ESC,
-             KC_BTN1,     KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,    KC_NO,
+             KC_BTN1,     KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,    KC_BTN1,
                           KC_M,    KC_N,    KC_E,    KC_I,    KC_O,       MO(SYMB),
-             MO(MDIA),    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_ENT,     KC_NO,
+             MO(MDIA),    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_ENT,     KC_BTN2,
                                    KC_SPC,  KC_UP,   KC_DOWN, KC_WH_U,    KC_WH_D,
-             KC_NO,   KC_RGUI,
-             KC_LALT,
-             KC_RALT, KC_RCTL, KC_RSFT
+             KC_NO,   KC_RALT,
+             KC_RCTL,
+             KC_RALT, KC_RGUI, KC_RSFT
     ),
 #else
 [BASE] = KEYMAP(  // layer 0 : default
@@ -75,18 +75,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(SYMB),       KC_A,      KC_R,    KC_S,    KC_T,   KC_F,
         KC_GRV,         KC_Z,      KC_X,    KC_C,    KC_V,   KC_B,    MO(MDIA),
         KC_UP,          KC_DOWN,   KC_LEFT, KC_RGHT, KC_BSPC,
-                                                     KC_BTN2,   KC_BTN1,
-                                                                KC_LCTL,
-                                              KC_LSFT, KC_LGUI, KC_LALT,
+                                                     KC_RALT,   KC_LGUI,
+                                                                KC_LALT,
+                                              KC_LSFT, KC_LCTL, KC_RALT,
         // right hand
              KC_BTN2,     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,       KC_ESC,
-             KC_BTN1,     KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,    KC_NO,
+             KC_BTN1,     KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,    KC_BTN1,
                           KC_M,    KC_N,    KC_E,    KC_I,    KC_O,       MO(SYMB),
-             MO(MDIA),    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_ENT,     KC_NO,
+             MO(MDIA),    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_ENT,     KC_BTN2,
                                    KC_SPC,  KC_UP,   KC_DOWN, KC_WH_U,    KC_WH_D,
-             KC_BTN1, KC_BTN2,
-             KC_RCTL,
-             KC_RALT, KC_RGUI, KC_RSFT
+             KC_RGUI, KC_RALT,
+             KC_LALT,
+             KC_RALT, KC_RCTL, KC_RSFT
     ),
 #endif
 
