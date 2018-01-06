@@ -52,9 +52,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         KC_ESC,           KC_1,      KC_2,    KC_3,    KC_4,   KC_5,    KC_ENT,
         KC_BTN1,          KC_Q,      KC_W,    KC_D,    KC_P,   KC_G,    KC_DELT,
-        MO(SYMB),         KC_A,      KC_R,    KC_S,    KC_T,   KC_F,
+        KC_TAB,           KC_A,      KC_R,    KC_S,    KC_T,   KC_F,
         // LT(SYMB, KC_TAB), KC_A,      KC_R,    KC_S,    KC_T,   KC_F,
-        KC_GRV,           KC_TAB,    KC_X,    KC_C,    KC_V,   KC_B,    MO(MDIA),
+        KC_GRV,           MO(SYMB),  KC_X,    KC_C,    KC_V,   KC_B,    MO(MDIA),
         KC_UP,            KC_DOWN,   KC_LEFT, KC_RGHT, KC_BSPC,
 #ifndef LINUX_MODE
                                                      KC_LALT,   KC_NO,
@@ -68,9 +68,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // right hand
              KC_BTN2,     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,       KC_ESC,
              KC_BTN1,     KC_J,    KC_L,    KC_U,    KC_Y,    KC_Z,       KC_BTN1,
-                          KC_M,    KC_N,    KC_E,    KC_I,    KC_O,       MO(SYMB),
+                          KC_M,    KC_N,    KC_E,    KC_I,    KC_O,       KC_ENT,
                         //   KC_M,    KC_N,    KC_E,    KC_I,    KC_O,       LT(SYMB, KC_ESC),
-             MO(MDIA),    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_ENT,     KC_BTN2,
+             MO(MDIA),    KC_K,    KC_H,    KC_COMM, KC_DOT,  MO(SYMB),   KC_BTN2,
                                    KC_SPC,  KC_UP,   KC_DOWN, KC_WH_U,    KC_WH_D,
 #ifndef LINUX_MODE
              KC_NO,   KC_RALT,
